@@ -5,5 +5,7 @@ namespace plantitas.Models
         public int ID {get; set;}
 
         public Double Total {get; set;}
+
+        public Double IGV {get; set;}
     }
 }
