@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace plantitas.Models
 {
-    [Table("t_contact")]
-    public class Contacto
+    //CARRITO
+    [Table("t_pre_order")]
+    public class PrePedido
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int ID {get; set;}
 
-        [Required(ErrorMessage = "Por favor ingrese Nombre")]
-        [Display(Name="Nombre")]
-        public String Name {get; set;}
+        public String UserID {get; set;}
 
-        public String Email {get; set;}
+        public int ProductID{get; set;}
 
-        public String Phone {get; set;}
-        
+        public int Quantity {get; set;}
+
+        public Decimal Price { get; set; }
     }
 }
