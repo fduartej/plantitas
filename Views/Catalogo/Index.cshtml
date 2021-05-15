@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Index";
+    int index=1;
 }
 
 <h1>Catalogo</h1>
@@ -9,15 +10,25 @@
 <div class="container d-flex justify-content-center mt-50 mb-50">
 
 @foreach (var item in Model) {
-    <div class="row">
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src="/images/@item.ImagenName" alt="@item.ImagenName">
-            <div class="card-body">
-                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
-                <p class="card-text">@Html.DisplayFor(modelItem => item.Price)</p>
-                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ID">Add</a>
+        <div class="row">
+
+            <div class="col-md-4 mt-2">
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <div class="card-img-actions"> 
+                            <img src="/images/@item.ImagenName" alt="@item.ImagenName" class="card-img img-fluid" width="96" height="150"> 
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Price)</p>
+                        <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ID">Add</a>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
+
+    index++;
 }
+
 </div>
