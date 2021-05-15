@@ -1,4 +1,3 @@
-
 using System;
 using System.Collections.Generic;
 using System.Diagnostics;
@@ -6,21 +5,18 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using plantitas.Models;
 
 namespace plantitas.Controllers
 {
-    public class ProductController : Controller
+    public class CatalogoController : Controller
     {
-        private readonly ILogger<ProductController> _logger;
+        
+        private readonly ILogger<CatalogoController> _logger;
 
-        public ProductController(ILogger<ProductController> logger)
+        public CatalogoController(ILogger<CatalogoController> logger)
         {
             _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            return View();
         }
     }
 }

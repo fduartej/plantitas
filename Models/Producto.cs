@@ -4,20 +4,18 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace plantitas.Models
 {
-    [Table("t_contact")]
-    public class Contacto
+    [Table("t_product")]
+    public class Producto
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int ID {get; set;}
 
-        [Required(ErrorMessage = "Por favor ingrese Nombre")]
-        [Display(Name="Nombre")]
         public String Name {get; set;}
 
-        public String Email {get; set;}
+        public Decimal Price { get; set; }
 
-        public String Phone {get; set;}
-        
+        public String ImagenName { get; set; }
+
     }
 }
