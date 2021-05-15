@@ -1,0 +1,23 @@
+@model IEnumerable<plantitas.Models.Producto>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Catalogo</h1>
+
+<div class="container d-flex justify-content-center mt-50 mb-50">
+
+@foreach (var item in Model) {
+    <div class="row">
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src="/images/@item.ImagenName" alt="@item.ImagenName">
+            <div class="card-body">
+                <h5 class="card-title">@Html.DisplayFor(modelItem => item.Name)</h5>
+                <p class="card-text">@Html.DisplayFor(modelItem => item.Price)</p>
+                <a class="btn btn-primary" asp-action="Edit" asp-route-id="@item.ID">Add</a>
+            </div>
+        </div>
+    </div>
+}
+</div>

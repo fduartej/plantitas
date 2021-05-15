@@ -15,7 +15,9 @@ namespace plantitas.Data
         }
 
         public DbSet<plantitas.Models.Contacto> DataContactos { get; set; }
-        public DbSet<plantitas.Models.PrePedido> DataCarrito { get; set; }
+        public DbSet<plantitas.Models.Proforma> DataCarrito { get; set; }
         public DbSet<plantitas.Models.Producto> DataProductos { get; set; }
+
+        public DbSet<plantitas.Models.Pedido> DataPedidos { get; set; }
     }
 }

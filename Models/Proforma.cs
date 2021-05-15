@@ -4,20 +4,20 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace plantitas.Models
 {
-    [Table("t_product")]
-    public class Producto
+    //CARRITO
+    [Table("t_proforma")]
+    public class Proforma
     {
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         [Column("id")]
         public int ID {get; set;}
 
-        public String Name {get; set;}
+        public String UserID {get; set;}
+
+        public int ProductID{get; set;}
+
+        public int Quantity{get; set;}
 
         public Decimal Price { get; set; }
-
-        public String ImagenName { get; set; }
-
-        public String Status { get; set; }
-
     }
 }
