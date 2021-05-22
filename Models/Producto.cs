@@ -17,6 +17,8 @@ namespace plantitas.Models
 
         public String ImagenName { get; set; }
 
+        public DateTime DueDate { get; set; }
+
         public String Status { get; set; }
 
     }

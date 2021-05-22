@@ -14,7 +14,7 @@ namespace plantitas.Models
 
         public String UserID {get; set;}
 
-        public int ProductID{get; set;}
+        public Producto Producto {get; set;}
 
         public int Quantity{get; set;}
 
