@@ -31,3 +31,7 @@ dotnet ef migrations add SegundaMigration --context plantitas.Data.ApplicationDb
 
 
 dotnet ef database update
+
+
+
+dotnet aspnet-codegenerator identity -dc plantitas.Data.ApplicationDbContext --files "Account.Register;Account.Login"
