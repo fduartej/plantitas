@@ -28,7 +28,10 @@ namespace plantitas.Controllers
         {
             var userID = _userManager.GetUserName(User);
             var items = from o in _context.DataCarrito select o;
-            items = items.Where(s => s.UserID.Equals(userID));
+            items = items.
+                Include(p => p.Producto).
+                Where(s => s.UserID.Equals(userID));
+            
             return View(await items.ToListAsync());
         }
 

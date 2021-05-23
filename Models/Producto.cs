@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -26,6 +27,8 @@ namespace plantitas.Models
 
         [Required(ErrorMessage = "Please enter Status")]
         public String Status { get; set; }
+
+        public virtual ICollection<Proforma> ProformaItems { get; set; }
 
     }
 }
