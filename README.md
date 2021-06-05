@@ -3,7 +3,7 @@
 dotnet new mvc --auth Individual
 
 MIGRATIONS
-dotnet ef migrations add ProdutctopwdMigration --context plantitas.Data.ApplicationDbContext -o "C:\Users\fduarte\Documents\Temp\Proyecto\Katia\plantitas\Data\Migrations"
+dotnet ef migrations add InitialMigration --context plantitas.Data.ApplicationDbContext -o "C:\Users\fduarte\Documents\Temp\Proyecto\Katia\plantitas\Data\Migrations"
 
 dotnet tool update --global dotnet-ef --version 5.0.4
 

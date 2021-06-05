@@ -1,0 +1,21 @@
+curl -X "GET" "https://api.spotify.com/v1/users/12153957956" 
+-H "Accept: application/json" 
+-H "Content-Type: application/json" 
+-H "Authorization: Bearer BQA2mKLwJkBOIXYMED5rBVt1tzIR5nYQ3xoS5UReUn2L9oh07PvcOz4InZN2m-57T1vKSJX8ry5QxfX0Uxpq31vUXd_kicZVxZh1fmvVL_McLIg_k146dYnYZBTw5N7C0Omh5v8AOcD4AMLXcqShcOw9ASDlVOEAZBUbRT4Ra0Q98kCNAbG1CfGhGxatu7t2IYvRZQzjYQb1VixrvyHpg8tvt_3kkU6CyUPz7jpnlqVM3ymvK8Ulq60fSVtMXTjGdJUCbHdmWJNnGPF8kXJn8w"
+
+GET http://localhost:5000/api/productos HTTP/1.1
+Accept: application/json
+
+GET http://localhost:5000/api/productos/1 HTTP/1.1
+Accept: application/json
+
+POST http://localhost:5000/api/productos HTTP/1.1
+Content-Type: application/json
+
+{
+  "name": "Planta10",
+  "price": 16,
+  "imagenName": "planta1.jpeg",
+  "dueDate": "0001-01-01T00:00:00",
+  "status": "A"
+}
